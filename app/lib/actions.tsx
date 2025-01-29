@@ -62,6 +62,7 @@ export type State = {
       `;
     } catch (error) {
       // If a database error occurs, return a more specific error.
+      console.log(error);
       return {
         message: 'Database Error: Failed to Create Invoice.',
       };
@@ -100,6 +101,7 @@ export type State = {
         WHERE id = ${id}
       `;
     } catch (error) {
+      console.log(error);
       return { message: 'Database Error: Failed to Update Invoice.' };
     }
    
