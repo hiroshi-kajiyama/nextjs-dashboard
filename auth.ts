@@ -18,7 +18,6 @@ async function getUser(email: string): Promise<User | undefined> {
 
 export const { auth, signIn, signOut } = NextAuth({
   ...authConfig,
-  secret: process.env.NEXTAUTH_SECRET,  // ✅ ここを追加
   providers: [
     Credentials({
       async authorize(credentials) {
